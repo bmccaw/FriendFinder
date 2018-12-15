@@ -1,0 +1,68 @@
+body {
+    width: 75%;
+   margin: 0px auto; 
+
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+
+   background-image: url(../beard-bonding-community-708440.jpg);
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+}
+
+header {
+    height: 100px;
+}
+
+header > nav {
+    height: 100%;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+main h1 {
+    font-weight: bold;
+}
+
+ main h2 {
+    font-weight: 300;
+}
+
+#logo-icon {
+   margin-left: 0px;
+   margin-top: 0px;
+   font-size: 70px;
+}
+
+#logo {
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+#head-nav-links {
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.mainpanel{
+   margin: 50px;
+   background-color: rgba(255, 255, 255, 0.9);
+   opacity: 1;
+}
+
+#mainpanel-content {
+    margin: 50px;
+}
+button {
+    margin: 10px;
+}
+#submit {
+    width: 100%;
+}
+#userMatchImage {
+    size: 50%;
+}
