@@ -6,7 +6,7 @@ var friends = require('../data/friends.js');
 
 // Export API routes
 module.exports = function (app) {
-    // console.log('___ENTER apiRoutes.js___');
+    
 
     // Total list of friend entries
     app.get('/api/friends', function (req, res) {
@@ -21,16 +21,16 @@ module.exports = function (app) {
         var userResponses = userInput.scores;
         // console.log('userResponses = ' + userResponses);
 
-        // Compute best friend match
+        // Compute friend match
         var matchName = '';
         var matchImage = '';
-        var totalDifference = 10000; // Make the initial value big for comparison
+        var totalDifference = 10000; 
 
         // Examine all existing friends in the list
         for (var i = 0; i < friends.length; i++) {
             // console.log('friend = ' + JSON.stringify(friends[i]));
 
-            // Compute differenes for each question
+            // Calculate the differences for each question
             var diff = 0;
             for (var j = 0; j < userResponses.length; j++) {
                 diff += Math.abs(friends[i].scores[j] - userResponses[j]);
@@ -52,7 +52,7 @@ module.exports = function (app) {
         // Add new user
         friends.push(userInput);
 
-        // Send appropriate response
+        // Send name and image back to populate the modal
         res.json({ status: 'OK', matchName: matchName, matchImage: matchImage });
     });
 };

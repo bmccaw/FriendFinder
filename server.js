@@ -6,7 +6,7 @@ var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
-//allow access to public dir for CSS
+//allow access to public dir so CSS stylesheet can be utilized
 app.use(express.static(path.join(__dirname, './app/public')));
 
 // Sets up the Express app to handle data parsing
